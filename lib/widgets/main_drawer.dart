@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals_app/routes.dart';
 
 class MainDrawer extends StatelessWidget {
   const MainDrawer({Key? key}) : super(key: key);
@@ -29,12 +30,16 @@ class MainDrawer extends StatelessWidget {
           _tileBuilder(
             icon: Icons.restaurant,
             title: "Meals",
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(RoutesName.HOME_SCREEN);
+            },
           ),
           _tileBuilder(
             icon: Icons.settings,
             title: "Settings",
-            onTap: () {},
+            onTap: () {
+              Navigator.of(context).pushNamed(RoutesName.SETTINGS_SCREEN);
+            },
           ),
         ],
       ),
